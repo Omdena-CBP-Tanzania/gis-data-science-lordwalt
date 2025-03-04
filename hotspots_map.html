@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_51cbc4f1791dbce7afecf23ac18d9eb6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_51cbc4f1791dbce7afecf23ac18d9eb6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_51cbc4f1791dbce7afecf23ac18d9eb6 = L.map(
+                "map_51cbc4f1791dbce7afecf23ac18d9eb6",
+                {
+                    center: [-765658.3981636752, 3905942.9804545413],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1bd971379473959bfa72be1c52607f25 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1bd971379473959bfa72be1c52607f25.addTo(map_51cbc4f1791dbce7afecf23ac18d9eb6);
+        
+    
+            var marker_cluster_658cd4b4f9ecc69e7a31d9df24528099 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_e304891cef94cdf04a5a4d0c22970e88 = L.marker(
+                [-1.5758103736790467, 38.177300509473035],
+                {
+}
+            ).addTo(marker_cluster_658cd4b4f9ecc69e7a31d9df24528099);
+        
+    
+            var icon_4fb3f0d678ae4bfc1dc5c6f279e2b15f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_e304891cef94cdf04a5a4d0c22970e88.setIcon(icon_4fb3f0d678ae4bfc1dc5c6f279e2b15f);
+        
+    
+        var popup_acf7abc8281192b53dd95be032733ea6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46d46e60c22627ac3add129165f8bd68 = $(`<div id="html_46d46e60c22627ac3add129165f8bd68" style="width: 100.0%; height: 100.0%;">Region: Dar es Salaam<br>Temperature Trend: 0.09</div>`)[0];
+                popup_acf7abc8281192b53dd95be032733ea6.setContent(html_46d46e60c22627ac3add129165f8bd68);
+            
+        
+
+        marker_e304891cef94cdf04a5a4d0c22970e88.bindPopup(popup_acf7abc8281192b53dd95be032733ea6)
+        ;
+
+        
+    
+    
+            var marker_656ee8e8a1d1de5a3c1cdb4f2ab54ad3 = L.marker(
+                [-7.646837516661358, 32.05278293651885],
+                {
+}
+            ).addTo(marker_cluster_658cd4b4f9ecc69e7a31d9df24528099);
+        
+    
+            var icon_5c3d663e8553dcd985388122e89b5b01 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_656ee8e8a1d1de5a3c1cdb4f2ab54ad3.setIcon(icon_5c3d663e8553dcd985388122e89b5b01);
+        
+    
+        var popup_a35b52c4f2a1cd2053646de7d51acbbf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bce616a06ec2728ee0d6ddade38a4728 = $(`<div id="html_bce616a06ec2728ee0d6ddade38a4728" style="width: 100.0%; height: 100.0%;">Region: Geita<br>Temperature Trend: 0.05</div>`)[0];
+                popup_a35b52c4f2a1cd2053646de7d51acbbf.setContent(html_bce616a06ec2728ee0d6ddade38a4728);
+            
+        
+
+        marker_656ee8e8a1d1de5a3c1cdb4f2ab54ad3.bindPopup(popup_a35b52c4f2a1cd2053646de7d51acbbf)
+        ;
+
+        
+    
+    
+            var marker_edd7b56ca95bce1cfca624488cfb372b = L.marker(
+                [-9.560799626103998, 31.311782295309243],
+                {
+}
+            ).addTo(marker_cluster_658cd4b4f9ecc69e7a31d9df24528099);
+        
+    
+            var icon_ff94cdf32741d24e24f4cc4f32775922 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_edd7b56ca95bce1cfca624488cfb372b.setIcon(icon_ff94cdf32741d24e24f4cc4f32775922);
+        
+    
+        var popup_3316bac8fc48a0664b17f6cb091238ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c458242f6b5b1988ef6ee9d9e33e4202 = $(`<div id="html_c458242f6b5b1988ef6ee9d9e33e4202" style="width: 100.0%; height: 100.0%;">Region: Iringa<br>Temperature Trend: 0.08</div>`)[0];
+                popup_3316bac8fc48a0664b17f6cb091238ed.setContent(html_c458242f6b5b1988ef6ee9d9e33e4202);
+            
+        
+
+        marker_edd7b56ca95bce1cfca624488cfb372b.bindPopup(popup_3316bac8fc48a0664b17f6cb091238ed)
+        ;
+
+        
+    
+    
+            var marker_e7f4e2ed5593c72cd297aa81c90dc14c = L.marker(
+                [-3.46233885120979, 32.67726138106231],
+                {
+}
+            ).addTo(marker_cluster_658cd4b4f9ecc69e7a31d9df24528099);
+        
+    
+            var icon_0380c751030876d0d6b0d3f0af6cd6c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_e7f4e2ed5593c72cd297aa81c90dc14c.setIcon(icon_0380c751030876d0d6b0d3f0af6cd6c0);
+        
+    
+        var popup_1a8b93410a13c97ac9c38515f6a6b6d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9aeecbb698b3315148e9b14e715c956b = $(`<div id="html_9aeecbb698b3315148e9b14e715c956b" style="width: 100.0%; height: 100.0%;">Region: Mara<br>Temperature Trend: 0.07</div>`)[0];
+                popup_1a8b93410a13c97ac9c38515f6a6b6d7.setContent(html_9aeecbb698b3315148e9b14e715c956b);
+            
+        
+
+        marker_e7f4e2ed5593c72cd297aa81c90dc14c.bindPopup(popup_1a8b93410a13c97ac9c38515f6a6b6d7)
+        ;
+
+        
+    
+    
+            var marker_e3a6122ceed80744ec7e41a38ec05d7f = L.marker(
+                [-6.377987535846133, 30.61677276103933],
+                {
+}
+            ).addTo(marker_cluster_658cd4b4f9ecc69e7a31d9df24528099);
+        
+    
+            var icon_28397db92f81c8e309572b8d93766e28 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_e3a6122ceed80744ec7e41a38ec05d7f.setIcon(icon_28397db92f81c8e309572b8d93766e28);
+        
+    
+        var popup_8010888d3253df04d69d07390befa709 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34e0ee0f04eef07ee9615098cb7ef16a = $(`<div id="html_34e0ee0f04eef07ee9615098cb7ef16a" style="width: 100.0%; height: 100.0%;">Region: Mbeya<br>Temperature Trend: 0.13</div>`)[0];
+                popup_8010888d3253df04d69d07390befa709.setContent(html_34e0ee0f04eef07ee9615098cb7ef16a);
+            
+        
+
+        marker_e3a6122ceed80744ec7e41a38ec05d7f.bindPopup(popup_8010888d3253df04d69d07390befa709)
+        ;
+
+        
+    
+    
+            var marker_ba8022e480d27d830f86fe48f5ee036f = L.marker(
+                [-1.6321697826196673, 37.78349120422955],
+                {
+}
+            ).addTo(marker_cluster_658cd4b4f9ecc69e7a31d9df24528099);
+        
+    
+            var icon_48222620a423d013af783fee91546ba8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_ba8022e480d27d830f86fe48f5ee036f.setIcon(icon_48222620a423d013af783fee91546ba8);
+        
+    
+        var popup_8c795da6a0400961ea972c47387576fe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba1ae4f180246c7111037f79486dc014 = $(`<div id="html_ba1ae4f180246c7111037f79486dc014" style="width: 100.0%; height: 100.0%;">Region: Morogoro<br>Temperature Trend: 0.13</div>`)[0];
+                popup_8c795da6a0400961ea972c47387576fe.setContent(html_ba1ae4f180246c7111037f79486dc014);
+            
+        
+
+        marker_ba8022e480d27d830f86fe48f5ee036f.bindPopup(popup_8c795da6a0400961ea972c47387576fe)
+        ;
+
+        
+    
+    
+            var marker_70aa1376c15d9372a40f26ed744f9a0e = L.marker(
+                [-4.119046717195542, 33.807539896010084],
+                {
+}
+            ).addTo(marker_cluster_658cd4b4f9ecc69e7a31d9df24528099);
+        
+    
+            var icon_cd6fd2b78fe162086de64268c01781b1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_70aa1376c15d9372a40f26ed744f9a0e.setIcon(icon_cd6fd2b78fe162086de64268c01781b1);
+        
+    
+        var popup_8de8f178e8bb182f50af8007f924a6d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_55564af935ea0012fb10ca02630136b3 = $(`<div id="html_55564af935ea0012fb10ca02630136b3" style="width: 100.0%; height: 100.0%;">Region: Mwanza<br>Temperature Trend: 0.13</div>`)[0];
+                popup_8de8f178e8bb182f50af8007f924a6d2.setContent(html_55564af935ea0012fb10ca02630136b3);
+            
+        
+
+        marker_70aa1376c15d9372a40f26ed744f9a0e.bindPopup(popup_8de8f178e8bb182f50af8007f924a6d2)
+        ;
+
+        
+    
+    
+            var marker_52606c5c855fa86f61abc4aa5b58c1bb = L.marker(
+                [-6.579461927341063, 35.69736886604094],
+                {
+}
+            ).addTo(marker_cluster_658cd4b4f9ecc69e7a31d9df24528099);
+        
+    
+            var icon_9ea0761d8f5858299d69ed91af299760 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_52606c5c855fa86f61abc4aa5b58c1bb.setIcon(icon_9ea0761d8f5858299d69ed91af299760);
+        
+    
+        var popup_f923d094979011fc1301e5371e6c39b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_05b69b34c4592356288d17a568418616 = $(`<div id="html_05b69b34c4592356288d17a568418616" style="width: 100.0%; height: 100.0%;">Region: Njombe<br>Temperature Trend: 0.08</div>`)[0];
+                popup_f923d094979011fc1301e5371e6c39b2.setContent(html_05b69b34c4592356288d17a568418616);
+            
+        
+
+        marker_52606c5c855fa86f61abc4aa5b58c1bb.bindPopup(popup_f923d094979011fc1301e5371e6c39b2)
+        ;
+
+        
+    
+    
+            var marker_03093a6d5cc7fd4a9ae85bd10f2525b5 = L.marker(
+                [-10.994742743650013, 39.07890863019944],
+                {
+}
+            ).addTo(marker_cluster_658cd4b4f9ecc69e7a31d9df24528099);
+        
+    
+            var icon_726ad08773c10ab20b336895caac20fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_03093a6d5cc7fd4a9ae85bd10f2525b5.setIcon(icon_726ad08773c10ab20b336895caac20fe);
+        
+    
+        var popup_d28ebc11a104807e6a16346a7c17df72 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c811c7274fd16f6d6fd66579024d33a = $(`<div id="html_3c811c7274fd16f6d6fd66579024d33a" style="width: 100.0%; height: 100.0%;">Region: Pwani<br>Temperature Trend: 0.15</div>`)[0];
+                popup_d28ebc11a104807e6a16346a7c17df72.setContent(html_3c811c7274fd16f6d6fd66579024d33a);
+            
+        
+
+        marker_03093a6d5cc7fd4a9ae85bd10f2525b5.bindPopup(popup_d28ebc11a104807e6a16346a7c17df72)
+        ;
+
+        
+    
+    
+            var marker_f51d7e3c718a12047686e54be06c5700 = L.marker(
+                [-7.9738239759863605, 32.71340119219484],
+                {
+}
+            ).addTo(marker_cluster_658cd4b4f9ecc69e7a31d9df24528099);
+        
+    
+            var icon_8b389403157623d0ca60ea2b0b7e45e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_f51d7e3c718a12047686e54be06c5700.setIcon(icon_8b389403157623d0ca60ea2b0b7e45e1);
+        
+    
+        var popup_456e12eec66bfc532481d565bbf45321 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e9d76601d694257f17bdb9ba7c82e8f = $(`<div id="html_0e9d76601d694257f17bdb9ba7c82e8f" style="width: 100.0%; height: 100.0%;">Region: Shinyanga<br>Temperature Trend: 0.15</div>`)[0];
+                popup_456e12eec66bfc532481d565bbf45321.setContent(html_0e9d76601d694257f17bdb9ba7c82e8f);
+            
+        
+
+        marker_f51d7e3c718a12047686e54be06c5700.bindPopup(popup_456e12eec66bfc532481d565bbf45321)
+        ;
+
+        
+    
+    
+            var marker_3d51c115eb7c940fef9a4a059254f103 = L.marker(
+                [-8.149835319975335, 36.089141381364556],
+                {
+}
+            ).addTo(marker_cluster_658cd4b4f9ecc69e7a31d9df24528099);
+        
+    
+            var icon_bc8c28820e43278416b4aaaa917f9c32 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_3d51c115eb7c940fef9a4a059254f103.setIcon(icon_bc8c28820e43278416b4aaaa917f9c32);
+        
+    
+        var popup_a350bde9e7d198d222362ef33441b3b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a7c332f58147a3526d4094d7b8fe1be9 = $(`<div id="html_a7c332f58147a3526d4094d7b8fe1be9" style="width: 100.0%; height: 100.0%;">Region: Songwe<br>Temperature Trend: 0.09</div>`)[0];
+                popup_a350bde9e7d198d222362ef33441b3b5.setContent(html_a7c332f58147a3526d4094d7b8fe1be9);
+            
+        
+
+        marker_3d51c115eb7c940fef9a4a059254f103.bindPopup(popup_a350bde9e7d198d222362ef33441b3b5)
+        ;
+
+        
+    
+    
+            var marker_17cfb43d3c21221b46c910d9ba44be91 = L.marker(
+                [-9.744071037466519, 32.36795389432496],
+                {
+}
+            ).addTo(marker_cluster_658cd4b4f9ecc69e7a31d9df24528099);
+        
+    
+            var icon_be2ec2628319e99e28989b626fb58e23 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_17cfb43d3c21221b46c910d9ba44be91.setIcon(icon_be2ec2628319e99e28989b626fb58e23);
+        
+    
+        var popup_f3c0276053a4da30e5a056a023f3b1d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1cbe0896d2b94212e8a7c09ce0c4ce3 = $(`<div id="html_a1cbe0896d2b94212e8a7c09ce0c4ce3" style="width: 100.0%; height: 100.0%;">Region: Tabora<br>Temperature Trend: 0.15</div>`)[0];
+                popup_f3c0276053a4da30e5a056a023f3b1d6.setContent(html_a1cbe0896d2b94212e8a7c09ce0c4ce3);
+            
+        
+
+        marker_17cfb43d3c21221b46c910d9ba44be91.bindPopup(popup_f3c0276053a4da30e5a056a023f3b1d6)
+        ;
+
+        
+    
+    
+            marker_cluster_658cd4b4f9ecc69e7a31d9df24528099.addTo(map_51cbc4f1791dbce7afecf23ac18d9eb6);
+        
+    
+            var layer_control_3b0ea85aca9397778a41ef94891694a2_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_1bd971379473959bfa72be1c52607f25,
+                },
+                overlays :  {
+                    "macro_element_658cd4b4f9ecc69e7a31d9df24528099" : marker_cluster_658cd4b4f9ecc69e7a31d9df24528099,
+                },
+            };
+            let layer_control_3b0ea85aca9397778a41ef94891694a2 = L.control.layers(
+                layer_control_3b0ea85aca9397778a41ef94891694a2_layers.base_layers,
+                layer_control_3b0ea85aca9397778a41ef94891694a2_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_51cbc4f1791dbce7afecf23ac18d9eb6);
+
+        
+</script>
+</html>
