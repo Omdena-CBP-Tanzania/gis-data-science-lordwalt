@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_94e5648c41fec936beb2affa61689c8d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_94e5648c41fec936beb2affa61689c8d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_94e5648c41fec936beb2affa61689c8d = L.map(
+                "map_94e5648c41fec936beb2affa61689c8d",
+                {
+                    center: [-6.369028, 34.888822],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2aa3b2f0c404c5f803cde7ca1b2ff602 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2aa3b2f0c404c5f803cde7ca1b2ff602.addTo(map_94e5648c41fec936beb2affa61689c8d);
+        
+    
+            var choropleth_3e438862ec6f37002ad91c3c3e1be52d = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_99ad6fadc95cb3e5022b272df8018e5a_styler(feature) {
+            switch(feature.id) {
+                case "0": 
+                    return {"color": "black", "fillColor": "#fed976", "fillOpacity": 0.7, "opacity": 0.2, "weight": 1};
+                case "1": 
+                    return {"color": "black", "fillColor": "#f03b20", "fillOpacity": 0.7, "opacity": 0.2, "weight": 1};
+                case "2": 
+                    return {"color": "black", "fillColor": "#bd0026", "fillOpacity": 0.7, "opacity": 0.2, "weight": 1};
+                case "3": 
+                    return {"color": "black", "fillColor": "#ffffb2", "fillOpacity": 0.7, "opacity": 0.2, "weight": 1};
+                default:
+                    return {"color": "black", "fillColor": "#fd8d3c", "fillOpacity": 0.7, "opacity": 0.2, "weight": 1};
+            }
+        }
+
+        function geo_json_99ad6fadc95cb3e5022b272df8018e5a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_99ad6fadc95cb3e5022b272df8018e5a = L.geoJson(null, {
+                onEachFeature: geo_json_99ad6fadc95cb3e5022b272df8018e5a_onEachFeature,
+            
+                style: geo_json_99ad6fadc95cb3e5022b272df8018e5a_styler,
+            ...{
+}
+        });
+
+        function geo_json_99ad6fadc95cb3e5022b272df8018e5a_add (data) {
+            geo_json_99ad6fadc95cb3e5022b272df8018e5a
+                .addData(data);
+        }
+            geo_json_99ad6fadc95cb3e5022b272df8018e5a_add({"bbox": [32.0, -8.0, 39.5, -2.5], "features": [{"bbox": [36.0, -4.0, 37.0, -3.0], "geometry": {"coordinates": [[[36.0, -3.0], [37.0, -3.0], [37.0, -4.0], [36.0, -4.0], [36.0, -3.0]]], "type": "Polygon"}, "id": "0", "properties": {"REGION_NAME": "Arusha"}, "type": "Feature"}, {"bbox": [39.0, -7.0, 39.5, -6.8], "geometry": {"coordinates": [[[39.0, -6.8], [39.5, -6.8], [39.5, -7.0], [39.0, -7.0], [39.0, -6.8]]], "type": "Polygon"}, "id": "1", "properties": {"REGION_NAME": "Dar es Salaam"}, "type": "Feature"}, {"bbox": [35.5, -6.5, 36.0, -6.0], "geometry": {"coordinates": [[[35.5, -6.0], [36.0, -6.0], [36.0, -6.5], [35.5, -6.5], [35.5, -6.0]]], "type": "Polygon"}, "id": "2", "properties": {"REGION_NAME": "Dodoma"}, "type": "Feature"}, {"bbox": [32.0, -3.0, 32.5, -2.5], "geometry": {"coordinates": [[[32.0, -2.5], [32.5, -2.5], [32.5, -3.0], [32.0, -3.0], [32.0, -2.5]]], "type": "Polygon"}, "id": "3", "properties": {"REGION_NAME": "Geita"}, "type": "Feature"}, {"bbox": [35.5, -8.0, 36.0, -7.5], "geometry": {"coordinates": [[[35.5, -7.5], [36.0, -7.5], [36.0, -8.0], [35.5, -8.0], [35.5, -7.5]]], "type": "Polygon"}, "id": "4", "properties": {"REGION_NAME": "Iringa"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_99ad6fadc95cb3e5022b272df8018e5a.addTo(choropleth_3e438862ec6f37002ad91c3c3e1be52d);
+        
+    
+    var color_map_68a4cdd76e738d0973cbcd222d7fdfe8 = {};
+
+    
+    color_map_68a4cdd76e738d0973cbcd222d7fdfe8.color = d3.scale.threshold()
+              .domain([0.045217, 0.04532591382765531, 0.04543482765531062, 0.04554374148296593, 0.045652655310621244, 0.04576156913827655, 0.045870482965931866, 0.045979396793587174, 0.04608831062124249, 0.046197224448897796, 0.046306138276553103, 0.04641505210420842, 0.046523965931863726, 0.04663287975951904, 0.04674179358717435, 0.04685070741482966, 0.04695962124248497, 0.04706853507014028, 0.04717744889779559, 0.0472863627254509, 0.047395276553106214, 0.04750419038076152, 0.047613104208416836, 0.04772201803607214, 0.04783093186372746, 0.047939845691382765, 0.04804875951903808, 0.04815767334669339, 0.048266587174348695, 0.04837550100200401, 0.04848441482965932, 0.04859332865731463, 0.04870224248496994, 0.04881115631262525, 0.04892007014028056, 0.04902898396793587, 0.04913789779559118, 0.04924681162324649, 0.049355725450901805, 0.04946463927855711, 0.04957355310621243, 0.049682466933867735, 0.04979138076152305, 0.04990029458917836, 0.050009208416833664, 0.05011812224448898, 0.050227036072144286, 0.0503359498997996, 0.05044486372745491, 0.05055377755511022, 0.05066269138276553, 0.050771605210420845, 0.05088051903807615, 0.05098943286573146, 0.051098346693386774, 0.05120726052104208, 0.051316174348697396, 0.051425088176352704, 0.05153400200400802, 0.051642915831663326, 0.05175182965931864, 0.05186074348697395, 0.051969657314629256, 0.05207857114228457, 0.05218748496993988, 0.05229639879759519, 0.0524053126252505, 0.052514226452905814, 0.05262314028056112, 0.052732054108216436, 0.052840967935871744, 0.05294988176352705, 0.053058795591182366, 0.05316770941883767, 0.05327662324649299, 0.053385537074148295, 0.05349445090180361, 0.05360336472945892, 0.05371227855711423, 0.05382119238476954, 0.05393010621242485, 0.05403902004008016, 0.05414793386773547, 0.054256847695390784, 0.05436576152304609, 0.054474675350701406, 0.05458358917835671, 0.05469250300601203, 0.054801416833667335, 0.05491033066132264, 0.05501924448897796, 0.05512815831663327, 0.05523707214428858, 0.05534598597194389, 0.055454899799599194, 0.05556381362725451, 0.05567272745490982, 0.05578164128256513, 0.05589055511022044, 0.05599946893787575, 0.05610838276553106, 0.056217296593186375, 0.05632621042084168, 0.056435124248497, 0.056544038076152305, 0.05665295190380762, 0.05676186573146293, 0.056870779559118234, 0.05697969338677355, 0.057088607214428856, 0.05719752104208417, 0.05730643486973948, 0.057415348697394786, 0.0575242625250501, 0.057633176352705415, 0.05774209018036072, 0.05785100400801603, 0.057959917835671344, 0.05806883166332665, 0.058177745490981966, 0.058286659318637274, 0.05839557314629258, 0.058504486973947896, 0.05861340080160321, 0.05872231462925852, 0.058831228456913826, 0.05894014228456914, 0.05904905611222445, 0.05915796993987976, 0.05926688376753507, 0.05937579759519038, 0.05948471142284569, 0.059593625250501006, 0.059702539078156314, 0.05981145290581162, 0.059920366733466936, 0.06002928056112224, 0.06013819438877756, 0.060247108216432865, 0.06035602204408817, 0.06046493587174349, 0.0605738496993988, 0.06068276352705411, 0.06079167735470942, 0.06090059118236473, 0.061009505010020046, 0.06111841883767535, 0.06122733266533066, 0.06133624649298597, 0.06144516032064128, 0.0615540741482966, 0.061662987975951905, 0.06177190180360721, 0.06188081563126252, 0.06198972945891784, 0.06209864328657315, 0.06220755711422846, 0.062316470941883764, 0.06242538476953907, 0.0625342985971944, 0.0626432124248497, 0.06275212625250501, 0.06286104008016032, 0.06296995390781564, 0.06307886773547094, 0.06318778156312625, 0.06329669539078156, 0.06340560921843688, 0.06351452304609219, 0.0636234368737475, 0.0637323507014028, 0.06384126452905811, 0.06395017835671343, 0.06405909218436874, 0.06416800601202405, 0.06427691983967936, 0.06438583366733466, 0.06449474749498998, 0.06460366132264529, 0.0647125751503006, 0.06482148897795592, 0.06493040280561121, 0.06503931663326654, 0.06514823046092184, 0.06525714428857715, 0.06536605811623247, 0.06547497194388777, 0.06558388577154309, 0.0656927995991984, 0.0658017134268537, 0.06591062725450902, 0.06601954108216433, 0.06612845490981964, 0.06623736873747495, 0.06634628256513025, 0.06645519639278558, 0.06656411022044088, 0.06667302404809619, 0.0667819378757515, 0.06689085170340682, 0.06699976553106213, 0.06710867935871744, 0.06721759318637274, 0.06732650701402805, 0.06743542084168337, 0.06754433466933868, 0.06765324849699399, 0.0677621623246493, 0.06787107615230462, 0.06797998997995992, 0.06808890380761523, 0.06819781763527054, 0.06830673146292585, 0.06841564529058117, 0.06852455911823647, 0.06863347294589178, 0.06874238677354709, 0.0688513006012024, 0.06896021442885772, 0.06906912825651303, 0.06917804208416833, 0.06928695591182366, 0.06939586973947895, 0.06950478356713427, 0.06961369739478958, 0.06972261122244489, 0.06983152505010021, 0.06994043887775551, 0.07004935270541082, 0.07015826653306613, 0.07026718036072144, 0.07037609418837676, 0.07048500801603207, 0.07059392184368737, 0.0707028356713427, 0.07081174949899799, 0.07092066332665331, 0.07102957715430862, 0.07113849098196393, 0.07124740480961925, 0.07135631863727455, 0.07146523246492986, 0.07157414629258517, 0.07168306012024048, 0.0717919739478958, 0.0719008877755511, 0.07200980160320641, 0.07211871543086172, 0.07222762925851703, 0.07233654308617235, 0.07244545691382766, 0.07255437074148297, 0.07266328456913827, 0.0727721983967936, 0.0728811122244489, 0.07299002605210421, 0.07309893987975952, 0.07320785370741482, 0.07331676753507015, 0.07342568136272545, 0.07353459519038076, 0.07364350901803607, 0.07375242284569139, 0.0738613366733467, 0.073970250501002, 0.07407916432865731, 0.07418807815631262, 0.07429699198396794, 0.07440590581162325, 0.07451481963927856, 0.07462373346693388, 0.07473264729458917, 0.0748415611222445, 0.0749504749498998, 0.07505938877755511, 0.07516830260521043, 0.07527721643286572, 0.07538613026052104, 0.07549504408817635, 0.07560395791583166, 0.07571287174348698, 0.07582178557114229, 0.0759306993987976, 0.0760396132264529, 0.07614852705410821, 0.07625744088176353, 0.07636635470941884, 0.07647526853707415, 0.07658418236472947, 0.07669309619238476, 0.07680201002004008, 0.07691092384769539, 0.0770198376753507, 0.07712875150300602, 0.07723766533066131, 0.07734657915831664, 0.07745549298597194, 0.07756440681362725, 0.07767332064128257, 0.07778223446893787, 0.07789114829659319, 0.0780000621242485, 0.0781089759519038, 0.07821788977955912, 0.07832680360721443, 0.07843571743486974, 0.07854463126252505, 0.07865354509018035, 0.07876245891783568, 0.07887137274549098, 0.07898028657314629, 0.07908920040080161, 0.07919811422845692, 0.07930702805611223, 0.07941594188376754, 0.07952485571142284, 0.07963376953907815, 0.07974268336673346, 0.07985159719438878, 0.0799605110220441, 0.0800694248496994, 0.08017833867735472, 0.08028725250501002, 0.08039616633266533, 0.08050508016032064, 0.08061399398797595, 0.08072290781563127, 0.08083182164328657, 0.08094073547094188, 0.0810496492985972, 0.0811585631262525, 0.08126747695390782, 0.08137639078156313, 0.08148530460921843, 0.08159421843687376, 0.08170313226452905, 0.08181204609218437, 0.08192095991983968, 0.08202987374749499, 0.08213878757515031, 0.08224770140280561, 0.08235661523046092, 0.08246552905811623, 0.08257444288577154, 0.08268335671342686, 0.08279227054108217, 0.08290118436873747, 0.0830100981963928, 0.08311901202404809, 0.08322792585170341, 0.08333683967935872, 0.08344575350701403, 0.08355466733466935, 0.08366358116232465, 0.08377249498997996, 0.08388140881763527, 0.08399032264529058, 0.0840992364729459, 0.08420815030060119, 0.08431706412825651, 0.08442597795591184, 0.08453489178356713, 0.08464380561122245, 0.08475271943887776, 0.08486163326653307, 0.08497054709418837, 0.08507946092184368, 0.085188374749499, 0.08529728857715431, 0.08540620240480962, 0.08551511623246494, 0.08562403006012025, 0.08573294388777555, 0.08584185771543086, 0.08595077154308617, 0.08605968537074149, 0.08616859919839678, 0.0862775130260521, 0.08638642685370743, 0.08649534068136272, 0.08660425450901804, 0.08671316833667335, 0.08682208216432866, 0.08693099599198398, 0.08703990981963927, 0.0871488236472946, 0.0872577374749499, 0.08736665130260521, 0.08747556513026053, 0.08758447895791582, 0.08769339278557114, 0.08780230661322645, 0.08791122044088176, 0.08802013426853708, 0.08812904809619239, 0.0882379619238477, 0.088346875751503, 0.08845578957915831, 0.08856470340681363, 0.08867361723446893, 0.08878253106212425, 0.08889144488977957, 0.08900035871743486, 0.08910927254509018, 0.08921818637274549, 0.0893271002004008, 0.08943601402805611, 0.08954492785571141, 0.08965384168336674, 0.08976275551102206, 0.08987166933867735, 0.08998058316633267, 0.09008949699398798, 0.09019841082164329, 0.0903073246492986, 0.0904162384769539, 0.09052515230460922, 0.09063406613226452, 0.09074297995991984, 0.09085189378757516, 0.09096080761523045, 0.09106972144288578, 0.09117863527054108, 0.09128754909819639, 0.09139646292585171, 0.091505376753507, 0.09161429058116233, 0.09172320440881764, 0.09183211823647294, 0.09194103206412826, 0.09204994589178357, 0.09215885971943888, 0.09226777354709419, 0.0923766873747495, 0.09248560120240482, 0.09259451503006012, 0.09270342885771543, 0.09281234268537074, 0.09292125651302605, 0.09303017034068137, 0.09313908416833667, 0.09324799799599198, 0.0933569118236473, 0.0934658256513026, 0.09357473947895792, 0.09368365330661323, 0.09379256713426853, 0.09390148096192386, 0.09401039478957915, 0.09411930861723447, 0.09422822244488979, 0.09433713627254509, 0.09444605010020041, 0.09455496392785571, 0.09466387775551102, 0.09477279158316633, 0.09488170541082164, 0.09499061923847696, 0.09509953306613225, 0.09520844689378757, 0.0953173607214429, 0.0954262745490982, 0.09553518837675351, 0.09564410220440882, 0.09575301603206413, 0.09586192985971945, 0.09597084368737474, 0.09607975751503006, 0.09618867134268538, 0.09629758517034068, 0.096406498997996, 0.0965154128256513, 0.09662432665330661, 0.09673324048096192, 0.09684215430861723, 0.09695106813627255, 0.09705998196392786, 0.09716889579158317, 0.09727780961923849, 0.09738672344689378, 0.0974956372745491, 0.09760455110220441, 0.09771346492985972, 0.09782237875751504, 0.09793129258517033, 0.09804020641282565, 0.09814912024048096, 0.09825803406813627, 0.09836694789579159, 0.09847586172344688, 0.0985847755511022, 0.09869368937875753, 0.09880260320641282, 0.09891151703406814, 0.09902043086172345, 0.09912934468937876, 0.09923825851703406, 0.09934717234468937, 0.0994560861723447, 0.099565])
+              .range(['#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#ffffb2ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#fed976ff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#feb24cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#fd8d3cff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#f03b20ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff', '#bd0026ff']);
+    
+
+    color_map_68a4cdd76e738d0973cbcd222d7fdfe8.x = d3.scale.linear()
+              .domain([0.045217, 0.099565])
+              .range([0, 450 - 50]);
+
+    color_map_68a4cdd76e738d0973cbcd222d7fdfe8.legend = L.control({position: 'topright'});
+    color_map_68a4cdd76e738d0973cbcd222d7fdfe8.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_68a4cdd76e738d0973cbcd222d7fdfe8.legend.addTo(map_94e5648c41fec936beb2affa61689c8d);
+
+    color_map_68a4cdd76e738d0973cbcd222d7fdfe8.xAxis = d3.svg.axis()
+        .scale(color_map_68a4cdd76e738d0973cbcd222d7fdfe8.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([0.045217, 0.054275000000000004, 0.063333, 0.072391, 0.081449, 0.090507, 0.099565]);
+
+    color_map_68a4cdd76e738d0973cbcd222d7fdfe8.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_68a4cdd76e738d0973cbcd222d7fdfe8.g = color_map_68a4cdd76e738d0973cbcd222d7fdfe8.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_68a4cdd76e738d0973cbcd222d7fdfe8.g.selectAll("rect")
+        .data(color_map_68a4cdd76e738d0973cbcd222d7fdfe8.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_68a4cdd76e738d0973cbcd222d7fdfe8.x(color_map_68a4cdd76e738d0973cbcd222d7fdfe8.color.domain()[i - 1]) : color_map_68a4cdd76e738d0973cbcd222d7fdfe8.x.range()[0],
+            x1: i < color_map_68a4cdd76e738d0973cbcd222d7fdfe8.color.domain().length ? color_map_68a4cdd76e738d0973cbcd222d7fdfe8.x(color_map_68a4cdd76e738d0973cbcd222d7fdfe8.color.domain()[i]) : color_map_68a4cdd76e738d0973cbcd222d7fdfe8.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_68a4cdd76e738d0973cbcd222d7fdfe8.g.call(color_map_68a4cdd76e738d0973cbcd222d7fdfe8.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("Temperature Trend (\u00b0C/year)");
+    
+            choropleth_3e438862ec6f37002ad91c3c3e1be52d.addTo(map_94e5648c41fec936beb2affa61689c8d);
+        
+    
+            var marker_cluster_b699097babf8695bdeac7e07dc54d46e = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_db7ec7ee8a71e4354a17d55e7d3f2f7e = L.marker(
+                [-3.5000479420187407, 36.49993540945542],
+                {
+}
+            ).addTo(marker_cluster_b699097babf8695bdeac7e07dc54d46e);
+        
+    
+            var icon_25909a320c75ca3464f80a7e58544942 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_db7ec7ee8a71e4354a17d55e7d3f2f7e.setIcon(icon_25909a320c75ca3464f80a7e58544942);
+        
+    
+        var popup_96e1783a80317f348f9f4725b932c2e6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_764021849c6ceee3b8770a79ba68cbc3 = $(`<div id="html_764021849c6ceee3b8770a79ba68cbc3" style="width: 100.0%; height: 100.0%;">     <strong>Arusha</strong><br>     Temperature Trend: 0.0630°C/year<br>     Precipitation Change: 7.74 mm<br>     Extreme Weather Events: 139     </div>`)[0];
+                popup_96e1783a80317f348f9f4725b932c2e6.setContent(html_764021849c6ceee3b8770a79ba68cbc3);
+            
+        
+
+        marker_db7ec7ee8a71e4354a17d55e7d3f2f7e.bindPopup(popup_96e1783a80317f348f9f4725b932c2e6)
+        ;
+
+        
+    
+    
+            var marker_2324f958f276b98a20a77accfee259f7 = L.marker(
+                [-6.900058698094167, 39.25000355686469],
+                {
+}
+            ).addTo(marker_cluster_b699097babf8695bdeac7e07dc54d46e);
+        
+    
+            var icon_34d8ab148a804b20cc869efe87ae0c09 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_2324f958f276b98a20a77accfee259f7.setIcon(icon_34d8ab148a804b20cc869efe87ae0c09);
+        
+    
+        var popup_0ae1081032785eda56f5fa610880b3a4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9b0ff06fcb218bda5a61356a5b314717 = $(`<div id="html_9b0ff06fcb218bda5a61356a5b314717" style="width: 100.0%; height: 100.0%;">     <strong>Dar es Salaam</strong><br>     Temperature Trend: 0.0900°C/year<br>     Precipitation Change: -13.49 mm<br>     Extreme Weather Events: 168     </div>`)[0];
+                popup_0ae1081032785eda56f5fa610880b3a4.setContent(html_9b0ff06fcb218bda5a61356a5b314717);
+            
+        
+
+        marker_2324f958f276b98a20a77accfee259f7.bindPopup(popup_0ae1081032785eda56f5fa610880b3a4)
+        ;
+
+        
+    
+    
+            var marker_079aa43fb8d02fecea07b75096612333 = L.marker(
+                [-6.25002091370185, 35.74997942170209],
+                {
+}
+            ).addTo(marker_cluster_b699097babf8695bdeac7e07dc54d46e);
+        
+    
+            var icon_039a08af63eb5f19571bab5c440c868e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_079aa43fb8d02fecea07b75096612333.setIcon(icon_039a08af63eb5f19571bab5c440c868e);
+        
+    
+        var popup_4df58b1b17543c634ecd73c3c87c8765 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_61a9f044172d52c16716fdadb025bf8a = $(`<div id="html_61a9f044172d52c16716fdadb025bf8a" style="width: 100.0%; height: 100.0%;">     <strong>Dodoma</strong><br>     Temperature Trend: 0.0996°C/year<br>     Precipitation Change: -2.75 mm<br>     Extreme Weather Events: 94     </div>`)[0];
+                popup_4df58b1b17543c634ecd73c3c87c8765.setContent(html_61a9f044172d52c16716fdadb025bf8a);
+            
+        
+
+        marker_079aa43fb8d02fecea07b75096612333.bindPopup(popup_4df58b1b17543c634ecd73c3c87c8765)
+        ;
+
+        
+    
+    
+            var marker_903b23c4fd4600bff33a89e1af6e7004 = L.marker(
+                [-7.750025500478515, 35.74997975463749],
+                {
+}
+            ).addTo(marker_cluster_b699097babf8695bdeac7e07dc54d46e);
+        
+    
+            var icon_401176019da4905a92c6c76e1fd36c67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_903b23c4fd4600bff33a89e1af6e7004.setIcon(icon_401176019da4905a92c6c76e1fd36c67);
+        
+    
+        var popup_9a27c01363c25507e950ec6fb5f68c3d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_710b1f9249be492f94bf077ea5835eaa = $(`<div id="html_710b1f9249be492f94bf077ea5835eaa" style="width: 100.0%; height: 100.0%;">     <strong>Iringa</strong><br>     Temperature Trend: 0.0778°C/year<br>     Precipitation Change: -15.41 mm<br>     Extreme Weather Events: 90     </div>`)[0];
+                popup_9a27c01363c25507e950ec6fb5f68c3d.setContent(html_710b1f9249be492f94bf077ea5835eaa);
+            
+        
+
+        marker_903b23c4fd4600bff33a89e1af6e7004.bindPopup(popup_9a27c01363c25507e950ec6fb5f68c3d)
+        ;
+
+        
+    
+    
+            marker_cluster_b699097babf8695bdeac7e07dc54d46e.addTo(map_94e5648c41fec936beb2affa61689c8d);
+        
+    
+            var layer_control_c45661da9aabc1b1434eaf35317d57df_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_2aa3b2f0c404c5f803cde7ca1b2ff602,
+                },
+                overlays :  {
+                    "choropleth" : choropleth_3e438862ec6f37002ad91c3c3e1be52d,
+                    "macro_element_b699097babf8695bdeac7e07dc54d46e" : marker_cluster_b699097babf8695bdeac7e07dc54d46e,
+                },
+            };
+            let layer_control_c45661da9aabc1b1434eaf35317d57df = L.control.layers(
+                layer_control_c45661da9aabc1b1434eaf35317d57df_layers.base_layers,
+                layer_control_c45661da9aabc1b1434eaf35317d57df_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_94e5648c41fec936beb2affa61689c8d);
+
+        
+</script>
+</html>
